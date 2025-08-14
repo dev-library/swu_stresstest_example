@@ -7,6 +7,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
+    @RequestMapping("/")
+    public String healthCheeck(){
+        System.out.println("헬스체크 완료");
+        // 브라우저 화면에 return 오른쪽 문자를 찍어줌
+        return "checked";
+    }
+    
     // 어떤 주소로 접속하면 어떤 기능을 실행할지 결정할 수 있는데
     // 메서드 위에 @RequestMapping("패턴") 으로 지정할 수 있음
     // 기본적 서버 주소 : localhost:8080
